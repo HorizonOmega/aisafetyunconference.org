@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'AI Safety Unconference';
+const pageDescription =
+  'Preparing the next AI Safety Unconference. Read what happened at VAISU 2024 and register your interest for future updates.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} pageClass="landing-page">
+  <div class="container">
+    <header class="hero">
+      <img src="/VAISU_Logo_White.png" alt="VAISU Logo" class="logo" />
+      <p class="badge">Next edition in planning</p>
+      <h1>AI Safety Unconference 2026</h1>
+      <p class="lead">
+        A participant-led space to make progress on AI safety.
+      </p>
+      <div class="actions">
+        <a
+          class="button primary"
+          href="https://www.youtube.com/playlist?list=PLOutnjp2BEJcNgzi3VSdobPx2A-HsGrNX"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch 2024 sessions
+        </a>
+        <a
+          class="button subtle"
+          href="mailto:team@horizonomega.org?subject=AI%20Safety%20Unconference%20updates"
+        >
+          Share your interest
+        </a>
+      </div>
+    </header>
+
+    <section class="card" id="about">
+      <h2>What is AI Safety Unconference?</h2>
+      <p>
+        The AI Safety Unconference is shaped by its participants. Sessions are proposed, scheduled, and facilitated by the community to
+        advance research on alignment, interpretability, governance, strategy, and related safety
+        questions.
+      </p>
+      <p>
+        A custom scheduling tool matches multi-track discussions to attendee preferences, and shared
+        chat and networking spaces keep collaboration going across time zones.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Last edition at a glance</h2>
+      <div class="stats">
+        <div>
+          <span class="stat-number">4</span>
+          <span class="stat-label">days of sessions</span>
+        </div>
+        <div>
+          <span class="stat-number">40</span>
+          <span class="stat-label">community led sessions</span>
+        </div>
+        <div>
+          <span class="stat-number">400</span>
+          <span class="stat-label">registrations</span>
+        </div>
+        <div>
+          <span class="stat-number">23</span>
+          <span class="stat-label">talk recordings</span>
+        </div>
+      </div>
+      <p class="note">
+        In VAISU 2024, 400 participants registered, and 40 sessions were conducted.
+        Survey respondents attended an average of 4.5 sessions and highlighted the value of new
+        connections. Improvements for next time include stronger matchmaking and inviting more senior
+        researchers.
+      </p>
+      <p class="note">
+        A USD&nbsp;2,000-equivalent prize recognized standout sessions from contributors including
+        Steve Omohundro, Filip Sondej, Joe Rogero, Jay Luong &amp; Nicoleta Kyosovska, Tianyi (Alex)
+        Qiu, Remmelt Ellen, Tse Yip Fai, Sarah D'Andrea, Gergő Gáspár, and Madhusudhan Pathak.
+      </p>
+      <p class="note">
+        <a href="https://horizonomega.substack.com/p/virtual-ai-safety-unconference-2024" target="_blank" rel="noopener noreferrer" class="report-link">Read the full VAISU 2024 report →</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .landing-page {
+    --accent: #3b82f6;
+    --accent-soft: rgba(59, 130, 246, 0.08);
+    --accent-hover: rgba(59, 130, 246, 0.24);
+    --text-dark: #111827;
+    --text-base: #374151;
+    --text-muted: #6b7280;
+    --border-light: #e5e7eb;
+    --border-medium: #d1d5db;
+    --bg-card: #ffffff;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-block: clamp(2rem, 4vw, 3rem);
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    display: grid;
+    gap: 0.5rem;
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo {
+    width: clamp(160px, 26vw, 220px);
+    height: auto;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+    border-radius: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    color: var(--text-dark);
+  }
+
+  .lead {
+    margin: 0;
+    color: var(--text-base);
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+    justify-content: center;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 150ms ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .button.primary {
+    background: #111827;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  .button.subtle {
+    background: #ffffff;
+    border-color: #111827;
+    color: #111827;
+  }
+
+  .button.primary:hover {
+    background: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.28);
+  }
+
+  .button.subtle:hover {
+    background: #f9fafb;
+  }
+
+  .button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    line-height: 1.6;
+  }
+
+  .card h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-base);
+  }
+
+  .stats {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    margin-block: 0.25rem;
+  }
+
+  .stats > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .note {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .report-link {
+    color: var(--text-base);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-medium);
+    transition: all 150ms ease;
+    font-style: italic;
+  }
+
+  .report-link:hover {
+    color: var(--text-dark);
+    border-bottom-color: var(--text-dark);
+  }
+
+  @media (max-width: 640px) {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      padding: 1rem;
+    }
+
+    .logo {
+      width: clamp(140px, 35vw, 180px);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+</style>
